@@ -5,7 +5,10 @@
 /.pnp
 .pnp.js
 *.lock
+
 codegen.yml
+next-env.d.ts
+
 tsconfig.json
 
 # testing
