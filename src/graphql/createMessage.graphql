@@ -1,0 +1,3 @@
+mutation createMessage($input: String!) {
+  createMessage(input: $input)
+}

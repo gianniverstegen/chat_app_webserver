@@ -1,0 +1,6 @@
+query ViewUsers {
+  viewUsers {
+    id
+    username
+  }
+}

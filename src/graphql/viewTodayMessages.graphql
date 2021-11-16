@@ -1,0 +1,9 @@
+query viewTodayMessages {
+  viewTodayMessages {
+    text
+    creatorId
+    createdAt
+    creatorName
+    id
+  }
+}
