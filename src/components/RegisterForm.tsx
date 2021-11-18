@@ -41,7 +41,7 @@ export const RegisterForm: React.FC<registerFormProps> = ({}) => {
                 newErrObject[error.field] = error.message;
                 setErrors(newErrObject);
               } else if (response.data.register.succesFlag) {
-                router.push("/");
+                router.push("/login");
               }
             }}
           >

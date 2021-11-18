@@ -58,7 +58,6 @@ export type Query = {
   viewUsers: Array<User>;
   viewMessage: Array<Message>;
   viewTodayMessages: Array<Message>;
-  testing: Scalars['String'];
 };
 
 export type User = {
@@ -125,11 +124,6 @@ export type ViewUsersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type ViewUsersQuery = { __typename?: 'Query', viewUsers: Array<{ __typename?: 'User', id: number, username: string }> };
-
-export type ViewMessageQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type ViewMessageQuery = { __typename?: 'Query', viewMessage: Array<{ __typename?: 'Message', id: number, text: string, creatorId: number, createdAt: string, creatorName: string }> };
 
 export type ViewTodayMessagesQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -374,44 +368,6 @@ export function useViewUsersLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type ViewUsersQueryHookResult = ReturnType<typeof useViewUsersQuery>;
 export type ViewUsersLazyQueryHookResult = ReturnType<typeof useViewUsersLazyQuery>;
 export type ViewUsersQueryResult = Apollo.QueryResult<ViewUsersQuery, ViewUsersQueryVariables>;
-export const ViewMessageDocument = gql`
-    query ViewMessage {
-  viewMessage {
-    id
-    text
-    creatorId
-    createdAt
-    creatorName
-  }
-}
-    `;
-
-/**
- * __useViewMessageQuery__
- *
- * To run a query within a React component, call `useViewMessageQuery` and pass it any options that fit your needs.
- * When your component renders, `useViewMessageQuery` returns an object from Apollo Client that contains loading, error, and data properties
- * you can use to render your UI.
- *
- * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
- *
- * @example
- * const { data, loading, error } = useViewMessageQuery({
- *   variables: {
- *   },
- * });
- */
-export function useViewMessageQuery(baseOptions?: Apollo.QueryHookOptions<ViewMessageQuery, ViewMessageQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<ViewMessageQuery, ViewMessageQueryVariables>(ViewMessageDocument, options);
-      }
-export function useViewMessageLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ViewMessageQuery, ViewMessageQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<ViewMessageQuery, ViewMessageQueryVariables>(ViewMessageDocument, options);
-        }
-export type ViewMessageQueryHookResult = ReturnType<typeof useViewMessageQuery>;
-export type ViewMessageLazyQueryHookResult = ReturnType<typeof useViewMessageLazyQuery>;
-export type ViewMessageQueryResult = Apollo.QueryResult<ViewMessageQuery, ViewMessageQueryVariables>;
 export const ViewTodayMessagesDocument = gql`
     query viewTodayMessages {
   viewTodayMessages {
