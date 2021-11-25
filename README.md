@@ -1,6 +1,6 @@
 # Front end for my global chatroom app
 
-The back end can be found [here](https://github.com/gianniverstegen/chat_app_backend)
+The back end can be found [here](https://github.com/gianniverstegen/chat_app_backend).
 
 ## Front end technologies:
 
