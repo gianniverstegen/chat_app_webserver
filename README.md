@@ -18,5 +18,8 @@ https://user-images.githubusercontent.com/79252340/143246300-9e547b57-7824-4c99-
 - Register and login/logout, including a register option for one-time users
 - Messaging in the global chatroom
 
+## Setting up:
 
+- Yarn build.
+- Yarn start.
 
